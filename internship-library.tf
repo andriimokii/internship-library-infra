@@ -12,7 +12,6 @@ terraform {
 resource "heroku_app" "internship_library" {
   name = var.heroku_app_name
   region = var.heroku_app_region
-
   buildpacks = var.heroku_app_buildpacks
 }
 
