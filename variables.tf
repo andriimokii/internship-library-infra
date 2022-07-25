@@ -12,7 +12,7 @@ variable "heroku_app_region" {
 
 variable "heroku_app_buildpacks" {
   type = list(string)
-  default = ["heroku/nodejs", "heroku/ruby"]
+  default = ["heroku/nodejs", "heroku/ruby", "heroku-community/apt"]
   description = "Buildpack names or URLs for the application."
 }
 
