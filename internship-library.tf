@@ -17,5 +17,10 @@ resource "heroku_app" "internship_library" {
 
 resource "heroku_addon" "database" {
   app_id = heroku_app.internship_library.id
-  plan   = format("%s:%s", var.heroku_addon_name, var.heroku_addon_plan_name)
+  plan   = format("%s:%s", var.heroku_addon_database_name, var.heroku_addon_database_plan_name)
+}
+
+resource "heroku_addon" "redis" {
+  app_id = heroku_app.internship_library.id
+  plan   = format("%s:%s", var.heroku_addon_redis_name, var.heroku_addon_redis_plan_name)
 }
